@@ -18,7 +18,7 @@ module.exports = {
       "type": "string",
       "required": false,
       "message": "Project description",
-      "default": "A Vue.js project"
+      "default": "A webpack project"
     },
     "author": {
       "type": "string",
@@ -59,5 +59,5 @@ module.exports = {
     ".eslintrc.js": "lint",
     ".eslintignore": "lint"
   },
-  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
+  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev"
 };
