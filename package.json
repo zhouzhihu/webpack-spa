@@ -1,0 +1,22 @@
+{
+  "name": "webpack-spa",
+  "version": "1.0.0",
+  "description": "webpack template for SPA",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhouzhihu/webpack-spa.git"
+  },
+  "keywords": [
+    "webpack",
+    "spa"
+  ],
+  "author": "zhouzhihu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhouzhihu/webpack-spa/issues"
+  },
+  "homepage": "https://github.com/zhouzhihu/webpack-spa#readme"
+}
