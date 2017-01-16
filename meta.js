@@ -24,6 +24,10 @@ module.exports = {
       "type": "string",
       "message": "Author"
     },
+    "vue": {
+      "type": "confirm",
+      "message": "Use Vue?"
+    },
     "lint": {
       "type": "confirm",
       "message": "Use ESLint to lint your code?"
