@@ -32,7 +32,7 @@ module.exports = {
   dll: {
     dir: path.resolve(__dirname, '../../lib/dll'),
     assetsDllDirectory: 'dll',
-    assetsDllRoot: path.resolve(__dirname, '../../assets/dll'),
+    assetsDllRoot: path.resolve(__dirname, '../../dist/dll'),
     jsName: '/dll/vendor.dll.js',
     cssName: '/dll/vendor.dll.css'
   }

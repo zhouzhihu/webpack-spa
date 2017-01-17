@@ -14,9 +14,6 @@ module.exports = {
     {
       test: /\.js$/,
       loader: 'eslint',
-      include: [
-        path.join(projectRoot, 'src')
-      ],
       exclude: /node_modules/
     }
   ],

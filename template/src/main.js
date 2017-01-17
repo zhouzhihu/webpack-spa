@@ -1,2 +1,2 @@
-import hello from './hello'
-document.getElementById("#app").appendChild(hello.())
+import hello from './modules/hello'
+document.getElementById('app').appendChild(hello())

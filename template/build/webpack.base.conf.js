@@ -35,12 +35,12 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')]
   },
   {{#vue}}
-  vue: require('./config/vue.cfg.js'),
+  vue: require('./vue.cfg.js'),
   {{/vue}}
   {{#lint}}
   eslint: {
     formatter: require('eslint-friendly-formatter')
   },
   {{/lint}}
-  module: require('./config/module.cfg.js')
+  module: require('./module.cfg.js')
 }
