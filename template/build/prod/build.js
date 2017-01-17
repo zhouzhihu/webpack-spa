@@ -22,7 +22,6 @@ rm('-rf', assetsPath)
 var dllPath = path.join(config.build.assetsRoot, config.dll.assetsDllDirectory)
 rm('-rf', dllPath)
 mkdir('-p', assetsPath)
-cp('-R', 'static/', assetsPath)
 
 webpack(webpackConfig, function (err, stats) {
   spinner.stop()

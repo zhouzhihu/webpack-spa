@@ -3,12 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.options.cssName %>"/>
-    <script type="text/javascript" src="<%= htmlWebpackPlugin.options.jsName %>"></script>
+    <!--[if lt IE 9]>
+      <script src="/static/js/html5shiv/html5.min.js"></script>
+      <script src="/static/js/respond/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
   <div id="app">
+    <button type="button" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-star"></span> Star
+    </button>
   </div>
+  <script type="text/javascript" src="<%= htmlWebpackPlugin.options.jsName %>"></script>
   </body>
 </html>

@@ -35,5 +35,9 @@ module.exports = {
     assetsDllRoot: path.resolve(__dirname, '../../dist/dll'),
     jsName: '/dll/vendor.dll.js',
     cssName: '/dll/vendor.dll.css'
+  },
+  static: {
+    dir: path.resolve(__dirname, '../../static'),
+    assetsRoot: path.resolve(__dirname, '../../dist/static'),
   }
 }
