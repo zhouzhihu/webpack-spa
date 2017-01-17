@@ -5,9 +5,9 @@
   "author": "{{author}}",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
-    "dll": "node build/dll.js && webpack --progress --colors --config ./build/webpack.dll.conf.js",
+    "dev": "node build/dev/dev-server.js",
+    "build": "node build/prod/build.js",
+    "dll": "node build/dll/dll.js && webpack --progress --colors --config ./build/dll/webpack.dll.conf.js",
     "test": ""
   },
   "dependencies": {

@@ -57,7 +57,8 @@ module.exports = {
   },
   "filters": {
     ".eslintrc.js": "lint",
-    ".eslintignore": "lint"
+    ".eslintignore": "lint",
+    'build/vue.cfg.js': 'vue'
   },
   "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev"
 };
