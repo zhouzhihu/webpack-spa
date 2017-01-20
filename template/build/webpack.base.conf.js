@@ -7,7 +7,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/main.js',
+    app: './src/app.js',
     components: utils.getComponentsEntries('./src/components/**/index.js')
   },
   output: {
