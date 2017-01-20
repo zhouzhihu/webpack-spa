@@ -74,7 +74,8 @@ module.exports = {
   "filters": {
     ".eslintrc.js": "lint",
     ".eslintignore": "lint",
-    'build/vue.cfg.js': "frontFrame == 'vue'"
+    "build/vue.cfg.js": "frontFrame == 'vue'",
+    "static": "frontFrame == 'angularJS'"
   },
   "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev"
 };
