@@ -24,13 +24,18 @@ module.exports = {
       'window.$': 'jquery'
     }),
     {{/jQuery}}
-    new CopyWebpackPlugin([{
-      from: config.dll.dir,
-      to: config.dll.assetsDllRoot
-    },{
-      from: config.static.dir,
-      to: config.static.assetsRoot
-    }]),
+    new CopyWebpackPlugin([
+      {{#if_eq frontFrame "angularJS"}}
+      {
+        from: config.static.dir,
+        to: config.static.assetsRoot
+      },
+      {{/if_eq}}
+      {
+        from: config.dll.dir,
+        to: config.dll.assetsDllRoot
+      }
+    ]),
     new webpack.DllReferencePlugin({
       context: config.projectRoot,
       manifest: require('../manifest.json'),
