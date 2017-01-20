@@ -24,9 +24,25 @@ module.exports = {
       "type": "string",
       "message": "Author"
     },
-    "vue": {
+    "frontFrame": {
+      "type": "list",
+      "message": "Select FrontFrame?",
+      "choices": [
+        {
+          "name": "Vue(http://cn.vuejs.org/)",
+          "value": 'vue',
+          "short": "Vue"
+        },
+        {
+          "name": "AngularJS()",
+          "value": 'angularJS',
+          "short": 'AngularJS'
+        }
+      ]
+    },
+    "jQuery": {
       "type": "confirm",
-      "message": "Use Vue?"
+      "message": "Use jQuery?"
     },
     "lint": {
       "type": "confirm",
