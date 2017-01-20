@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.options.cssName %>"/>
+    {{#if_eq frontFrame "angularJS"}}
     <!--[if lt IE 9]>
       <script src="/static/js/html5shiv/html5.min.js"></script>
       <script src="/static/js/respond/respond.min.js"></script>
     <![endif]-->
+    {{/if_eq}}
   </head>
   <body>
   <div id="app">
