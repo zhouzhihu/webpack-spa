@@ -16,6 +16,14 @@ module.exports = {
     filename: '[name].js'
   },
   plugins: [
+    {{#jQuery}}
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      'window.$': 'jquery'
+    }),
+    {{/jQuery}}
     new CopyWebpackPlugin([{
       from: config.dll.dir,
       to: config.dll.assetsDllRoot
@@ -37,9 +45,9 @@ module.exports = {
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
-  {{#vue}}
+  {{#if_eq frontFrame "vue"}}
   vue: require('./vue.cfg.js'),
-  {{/vue}}
+  {{/if_eq}}
   {{#lint}}
   eslint: {
     formatter: require('eslint-friendly-formatter')
