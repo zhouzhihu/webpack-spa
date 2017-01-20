@@ -11,13 +11,13 @@
     "test": ""
   },
   "dependencies": {
-    {{#vue}}
+    {{#if_eq frontFrame "vue"}}
     "vue": "^2.0.1"
-    {{/vue}}
+    {{/if_eq}}
     {{#jQuery}}
-    {{#vue}}
+    {{#if_eq frontFrame "vue"}}
     ,
-    {{/vue}}
+    {{/if_eq}}
     "jquery": "^1.12.4"
     {{/jQuery}}
   },
@@ -68,10 +68,10 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.2",
     "url-loader": "^0.5.7",
-    {{#vue}}
+    {{#if_eq frontFrame "vue"}}
     "vue-loader": "^9.5.1",
     "vue-style-loader": "^1.0.0",
-    {{/vue}}
+    {{/if_eq}}
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^1.8.3",
     "webpack-hot-middleware": "^2.12.2",
