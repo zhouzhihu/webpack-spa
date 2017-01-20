@@ -14,6 +14,12 @@
     {{#vue}}
     "vue": "^2.0.1"
     {{/vue}}
+    {{#jQuery}}
+    {{#vue}}
+    ,
+    {{/vue}}
+    "jquery": "^1.12.4"
+    {{/jQuery}}
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",

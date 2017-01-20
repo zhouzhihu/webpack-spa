@@ -1,5 +1,13 @@
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    commonjs: true,
+    {{#jQuery}}
+    jquery: true,
+    {{/jQuery}}
+    es6: true
+  },
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module'
@@ -37,9 +45,9 @@ module.exports = {
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       'js': 'never'
-      {{#vue}}
+      {{#if_eq frontFrame "vue"}}
       ,'vue': 'never'
-      {{/vue}}
+      {{/if_eq}}
     }],
     {{/if_eq}}
     // allow debugger during development
