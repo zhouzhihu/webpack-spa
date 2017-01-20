@@ -32,7 +32,7 @@ module.exports = {
     alias: {'vue': 'vue/dist/vue.js'}
   },
   {{#if_eq frontFrame "vue"}}
-  vue: require('./config/vue.cfg.js'),
+  vue: require('../vue.cfg.js'),
   {{/if_eq}}
   module: require('../module.cfg.js')
 };
