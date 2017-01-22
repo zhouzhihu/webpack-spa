@@ -6,10 +6,7 @@ var merge = require('webpack-merge')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  entry: {
-    app: './src/app.js',
-    components: utils.getComponentsEntries('./src/components/**/index.js')
-  },
+  entry: utils.getEntries('./src/modules/**/app.js'),
   output: {
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,

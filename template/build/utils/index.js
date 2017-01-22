@@ -5,11 +5,31 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var glob = require('glob')
 
 exports.getEntries = function (globPath) {
-  var entries = {}
+  var entries = {},
+    basename, tmp, pathname
+
   glob.sync(globPath).forEach(function (entry) {
-    var basename = path.basename(entry, path.extname(entry), 'router.js') // 过滤router.js
-    entries[basename] = entry
+    basename = path.basename(entry, path.extname(entry))
+    tmp = entry.split('/').splice(-2)
+    pathname = tmp.splice(0, 1) + '/index'
+    entries[pathname] = entry
   })
+  entries['index'] = './src/app.js'
+  entries['components'] = this.getComponentsEntries('./src/components/**/index.js')
+  return entries;
+}
+
+exports.getEntryPages = function(globPath){
+  var entries = {},
+    basename, tmp, pathname
+
+  glob.sync(globPath).forEach(function (entry) {
+    basename = path.basename(entry, path.extname(entry))
+    tmp = entry.split('/').splice(-2)
+    pathname = tmp.splice(0, 1) + '/index'
+    entries[pathname] = entry
+  })
+  entries['index'] = './src/app.js'
   return entries;
 }
 
