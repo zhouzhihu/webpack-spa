@@ -48,7 +48,7 @@ exports.getComponentsPath = function (globPath) {
   glob.sync(globPath).forEach(function (entry) {
     var tmp = entry.substr(0, entry.lastIndexOf("/"))
     var basename = tmp.substr(tmp.lastIndexOf("/") + 1)
-    var filePath = path.resolve(__dirname, "../" + entry)
+    var filePath = path.resolve(__dirname, "../../" + entry)
     entries[basename] = filePath
   })
   return entries;
